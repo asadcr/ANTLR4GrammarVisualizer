@@ -1,6 +1,5 @@
 ﻿namespace GrunCS.Graphs
 {
-    using System;
     using Antlr4.Runtime;
     using Antlr4.Runtime.Tree;
 
@@ -17,12 +16,12 @@
     {
         public ErrorVertex(IErrorNode errorNode)
         {
-            this.ErrorNode = errorNode;
+            ErrorNode = errorNode;
         }
         
         public IErrorNode ErrorNode { get; }
 
-        public override string Text => this.ErrorNode.Symbol.Text;
+        public override string Text => ErrorNode.Symbol.Text;
 
         public override bool IsError => true;
 
@@ -33,7 +32,7 @@
     {
         public TokenVertex(IToken token)
         {
-            this.Token = token;
+            Token = token;
         }
         
         public IToken Token { get; }
@@ -42,12 +41,12 @@
         {
             get
             {
-                if (string.IsNullOrWhiteSpace(this.Token.Text) && (this.Token.Text == null || !this.Token.Text.Contains("\n")))
+                if (string.IsNullOrWhiteSpace(Token.Text) && (Token.Text == null || !Token.Text.Contains("\n")))
                 {
-                    return $"<{MainWindow.LexerSymbolicNames[this.Token.Type]}>";
+                    return $"<{MainWindow.LexerSymbolicNames[Token.Type]}>";
                 }
                 
-                return this.Token.Text.Replace("\n", "\\n");
+                return Token.Text.Replace("\n", "\\n");
             }
         }
 
@@ -58,12 +57,12 @@
     {
         public RuleVertex(IRuleNode ruleNode)
         {
-            this.RuleNode = ruleNode;
+            RuleNode = ruleNode;
         }
         
         public IRuleNode RuleNode { get; }
 
-        public override string Text => MainWindow.Parser.RuleNames[this.RuleNode.RuleContext.RuleIndex];
+        public override string Text => MainWindow.Parser.RuleNames[RuleNode.RuleContext.RuleIndex];
 
         public override string Type => "Rule";
     }

@@ -12,26 +12,39 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280" >
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.2*" />
-            <ColumnDefinition Width="5" />
-            <ColumnDefinition Width="0.8*" />
-        </Grid.ColumnDefinitions>
-        <TreeView Name="TvMain">
-        </TreeView>
-        <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
-        <controls:ZoomControl Grid.Column="2" Zoom="1" ZoomBoxOpacity="0.5" Mode="Fill">
-            <graphs:TokenGraphLayout x:Name="GraphLayout" Margin="10" Graph="{Binding Path=Graph}"
-                                     LayoutAlgorithmType="EfficientSugiyama">
-                <graphs:TokenGraphLayout.LayoutParameters>
-                    <layout:EfficientSugiyamaLayoutParameters 
-                        EdgeRouting="Orthogonal"
-                        PositionMode="0"
-                        LayerDistance="17"
-                        MinimizeEdgeLength="True"></layout:EfficientSugiyamaLayoutParameters>
-                </graphs:TokenGraphLayout.LayoutParameters>
-            </graphs:TokenGraphLayout>
-        </controls:ZoomControl>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.8*" />
+            </Grid.ColumnDefinitions>
+            <TextBox Name="ErrorStatus" ></TextBox>
+            <TextBox  Grid.Column="1" Name="InputBox" ></TextBox>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="0.8*" />
+            </Grid.ColumnDefinitions>
+            <ListView Name="TokensListView"></ListView>
+            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
+            <controls:ZoomControl Grid.Column="2" Zoom="1" ZoomBoxOpacity="0.5" Mode="Fill">
+                <graphs:TokenGraphLayout x:Name="GraphLayout" Margin="10" Graph="{Binding Path=Graph}"
+                                         LayoutAlgorithmType="EfficientSugiyama">
+                    <graphs:TokenGraphLayout.LayoutParameters>
+                        <layout:EfficientSugiyamaLayoutParameters 
+                            EdgeRouting="Orthogonal"
+                            PositionMode="0"
+                            LayerDistance="17"
+                            MinimizeEdgeLength="True"></layout:EfficientSugiyamaLayoutParameters>
+                    </graphs:TokenGraphLayout.LayoutParameters>
+                </graphs:TokenGraphLayout>
+            </controls:ZoomControl>
+        </Grid>
     </Grid>
     
     <Window.Resources>

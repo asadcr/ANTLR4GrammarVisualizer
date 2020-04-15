@@ -3,29 +3,28 @@
     using System;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
-    using System.Windows.Controls;
     using Antlr4.Runtime;
     using Antlr4.Runtime.Tree;
-    using GrunCS.Annotations;
-    using GrunCS.Graphs;
+    using Annotations;
+    using Graphs;
 
     public class MainWindowViewModel : INotifyPropertyChanged
     {
         public MainWindowViewModel()
         {
-            this.Graph = new TokenGraph();
-            this.DrawTraverse(this.Graph, MainWindow.Tree, MainWindow.Parser);
+            Graph = new TokenGraph();
+            DrawTraverse(Graph, MainWindow.Tree, MainWindow.Parser);
         }
         
         public event PropertyChangedEventHandler PropertyChanged;
         
-        public TokenGraph Graph { get; private set; }
+        public TokenGraph Graph { get; }
 
 
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         
@@ -33,17 +32,17 @@
         {
             PayloadVertex vertex;
 
-            if (tree is IErrorNode)
+            if (tree is IErrorNode node)
             {
-                vertex = new ErrorVertex((IErrorNode)tree);
+                vertex = new ErrorVertex(node);
             }
             else if (tree is IRuleNode)
             {
                 vertex = new RuleVertex((IRuleNode)tree.Payload);
             }
-            else if (tree.Payload is IToken)
+            else if (tree.Payload is IToken token)
             {
-                vertex = new TokenVertex((IToken)tree.Payload);
+                vertex = new TokenVertex(token);
             }
             else
             {
@@ -52,9 +51,9 @@
             
             graph.AddVertex(vertex);
 
-            for (int i = 0; i < tree.ChildCount; i++)
+            for (var i = 0; i < tree.ChildCount; i++)
             {
-                var childVertex = this.DrawTraverse(graph, tree.GetChild(i), parser);
+                var childVertex = DrawTraverse(graph, tree.GetChild(i), parser);
                 var edge = new TokenEdge(vertex, childVertex);
                 graph.AddEdge(edge);
             }
