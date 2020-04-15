@@ -8,10 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AntlrGrammarVisualizer.Properties {
-    using System;
-    
-    
+namespace AntlrGrammarVisualizer.Wpf.Properties {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>

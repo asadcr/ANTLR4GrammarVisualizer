@@ -1,4 +1,4 @@
-﻿<Window x:Class="AntlrGrammarVisualizer.MainWindow"
+﻿<Window x:Class="AntlrGrammarVisualizer.Wpf.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,7 +7,7 @@
         xmlns:graphsharp="clr-namespace:GraphSharp.Controls;assembly=GraphSharp.Controls"
         xmlns:layout="clr-namespace:GraphSharp.Algorithms.Layout.Simple.Hierarchical;assembly=GraphSharp"
         xmlns:attachedBehaviours="clr-namespace:GraphSharp.AttachedBehaviours;assembly=GraphSharp.Controls"
-        xmlns:graphs="clr-namespace:AntlrGrammarVisualizer.Graphs"
+        xmlns:graphs="clr-namespace:AntlrGrammarVisualizer.Wpf.Graphs"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280" >
     <Grid>

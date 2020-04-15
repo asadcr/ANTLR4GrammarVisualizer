@@ -1,4 +1,4 @@
-﻿namespace AntlrGrammarVisualizer
+﻿namespace AntlrGrammarVisualizer.Wpf
 {
     using System;
     using System.ComponentModel;

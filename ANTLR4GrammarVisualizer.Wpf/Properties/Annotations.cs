@@ -28,7 +28,7 @@ SOFTWARE. */
 // ReSharper disable MemberCanBeProtected.Global
 // ReSharper disable InconsistentNaming
 
-namespace AntlrGrammarVisualizer.Properties
+namespace AntlrGrammarVisualizer.Wpf.Properties
 {
     using System;
 

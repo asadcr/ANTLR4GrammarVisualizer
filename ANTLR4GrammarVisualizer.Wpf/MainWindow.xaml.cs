@@ -1,4 +1,4 @@
-﻿namespace AntlrGrammarVisualizer
+﻿namespace AntlrGrammarVisualizer.Wpf
 {
     using System;
     using System.Collections.Generic;
@@ -11,7 +11,6 @@
     using Antlr;
     using Antlr4.Runtime;
     using Antlr4.Runtime.Tree;
-    using gui;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml

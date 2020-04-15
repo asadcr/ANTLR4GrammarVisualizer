@@ -1,4 +1,4 @@
-﻿namespace AntlrGrammarVisualizer.Graphs
+﻿namespace AntlrGrammarVisualizer.Wpf.Graphs
 {
     using QuickGraph;
 

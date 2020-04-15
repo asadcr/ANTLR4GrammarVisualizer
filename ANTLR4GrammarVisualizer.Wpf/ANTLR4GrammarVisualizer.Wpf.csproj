@@ -8,7 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3FE12BEA-B342-40D5-A382-70220ADDFE32}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>AntlrGrammarVisualizer</RootNamespace>
+    <RootNamespace>AntlrGrammarVisualizer.Wpf</RootNamespace>
     <AssemblyName>AntlrGrammarVisualizer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
