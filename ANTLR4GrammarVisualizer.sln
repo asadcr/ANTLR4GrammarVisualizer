@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gui", "ANTLR4GrammarVisualizer.Wpf\ANTLR4GrammarVisualizer.Wpf.csproj", "{3FE12BEA-B342-40D5-A382-70220ADDFE32}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANTLR4GrammarVisualizer.Wpf", "ANTLR4GrammarVisualizer.Wpf\ANTLR4GrammarVisualizer.Wpf.csproj", "{3FE12BEA-B342-40D5-A382-70220ADDFE32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANTLR4GrammarVisualizer.Grammars", "ANTLR4GrammarVisualizer.Grammars\ANTLR4GrammarVisualizer.Grammars.csproj", "{7AF4112C-596F-4BE1-8725-3A69FBDAF3BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,15 @@ Global
 		{3FE12BEA-B342-40D5-A382-70220ADDFE32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FE12BEA-B342-40D5-A382-70220ADDFE32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FE12BEA-B342-40D5-A382-70220ADDFE32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF4112C-596F-4BE1-8725-3A69FBDAF3BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF4112C-596F-4BE1-8725-3A69FBDAF3BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF4112C-596F-4BE1-8725-3A69FBDAF3BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF4112C-596F-4BE1-8725-3A69FBDAF3BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD49E796-587E-45F6-BE9D-30EFAF94373D}
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,4 @@
-﻿namespace AntlrGrammarVisualizer.Wpf
+﻿namespace ANTLR4GrammarVisualizer.Wpf
 {
     using System.Windows;
 

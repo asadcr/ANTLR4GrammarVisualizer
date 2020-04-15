@@ -1,4 +1,4 @@
-﻿namespace AntlrGrammarVisualizer.Wpf.Graphs
+﻿namespace ANTLR4GrammarVisualizer.Wpf.Graphs
 {
     using Antlr4.Runtime;
     using Antlr4.Runtime.Tree;

@@ -1,4 +1,4 @@
-﻿namespace AntlrGrammarVisualizer.Wpf.Graphs
+﻿namespace ANTLR4GrammarVisualizer.Wpf.Graphs
 {
     using System.Windows;
     using GraphSharp.Controls;

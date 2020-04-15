@@ -1,16 +1,17 @@
-﻿namespace AntlrGrammarVisualizer.Wpf
+﻿namespace ANTLR4GrammarVisualizer.Wpf
 {
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
+    using System.IO;
     using System.Linq;
     using System.Reflection;
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Media;
-    using Antlr;
     using Antlr4.Runtime;
     using Antlr4.Runtime.Tree;
+    using Grammars;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -108,18 +109,18 @@
 
             var sw = Stopwatch.StartNew();
 
-            var lexer = new CppLexer(new AntlrFileStream(input));
+            var lexer = new ObjectiveCLexer(new AntlrInputStream(File.ReadAllText(input)));
             var tokenStream = new CommonTokenStream(lexer);
             tokenStream.Fill();
 
             var errorHandler = new AntlrErrorStrategy();
-            var parser = new CppParser(tokenStream)
+            var parser = new ObjectiveCParser(tokenStream)
             {
                 BuildParseTree = true,
                 ErrorHandler = errorHandler
             };
 
-            ParserRuleContext tree = parser.translationunit();
+            ParserRuleContext tree = parser.translationUnit();
 
             var tokenSymbolicNames = (string[])lexer.GetType().GetField("_SymbolicNames", BindingFlags.Static | BindingFlags.NonPublic).GetValue(lexer);
             var tokens = GetTokens(tokenStream, tokenSymbolicNames);

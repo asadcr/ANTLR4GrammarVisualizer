@@ -1,4 +1,4 @@
-﻿namespace AntlrGrammarVisualizer.Wpf
+﻿namespace ANTLR4GrammarVisualizer.Wpf
 {
     using System;
     using System.ComponentModel;
@@ -6,7 +6,6 @@
     using Antlr4.Runtime;
     using Antlr4.Runtime.Tree;
     using Graphs;
-    using Properties;
 
     public class MainWindowViewModel : INotifyPropertyChanged
     {
@@ -21,7 +20,6 @@
         public TokenGraph Graph { get; }
 
 
-        [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
