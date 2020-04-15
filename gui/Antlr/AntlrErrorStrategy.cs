@@ -1,4 +1,4 @@
-﻿namespace gui.Antlr
+﻿namespace AntlrGrammarVisualizer.Antlr
 {
     using System.Collections.Generic;
     using Antlr4.Runtime;

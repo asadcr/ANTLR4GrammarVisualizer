@@ -1,12 +1,12 @@
-﻿namespace GrunCS
+﻿namespace AntlrGrammarVisualizer
 {
     using System;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
     using Antlr4.Runtime;
     using Antlr4.Runtime.Tree;
-    using Annotations;
     using Graphs;
+    using Properties;
 
     public class MainWindowViewModel : INotifyPropertyChanged
     {

@@ -1,4 +1,4 @@
-﻿namespace GrunCS.Graphs
+﻿namespace AntlrGrammarVisualizer.Graphs
 {
     using System.Windows;
     using GraphSharp.Controls;

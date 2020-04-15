@@ -1,4 +1,4 @@
-﻿namespace GrunCS
+﻿namespace AntlrGrammarVisualizer
 {
     using System;
     using System.Collections.Generic;
@@ -8,10 +8,10 @@
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Media;
+    using Antlr;
     using Antlr4.Runtime;
     using Antlr4.Runtime.Tree;
     using gui;
-    using gui.Antlr;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
