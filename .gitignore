@@ -1,8 +1,11 @@
 .idea
+.antlr 
 
 *.suo
 *.suo
 *.user
+*.tokens
+*.interp
 .vs/
 [Bb]in/
 [Oo]bj/
