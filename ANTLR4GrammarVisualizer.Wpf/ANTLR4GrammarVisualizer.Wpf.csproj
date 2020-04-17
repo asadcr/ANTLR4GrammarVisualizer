@@ -7,30 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Antlr" Version="3.5.0.2" />
     <PackageReference Include="Antlr4" Version="4.6.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
+    <PackageReference Include="GraphSharp47" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ANTLR4GrammarVisualizer.Grammars\ANTLR4GrammarVisualizer.Grammars.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="GraphSharp">
-      <HintPath>..\..\..\..\..\Downloads\graphsharp\sourceCode\graphsharp\bin\GraphSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="GraphSharp.Controls">
-      <HintPath>..\..\..\..\..\Downloads\graphsharp\sourceCode\graphsharp\bin\GraphSharp.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="QuickGraph">
-      <HintPath>..\..\..\..\..\Downloads\graphsharp\sourceCode\graphsharp\bin\QuickGraph.dll</HintPath>
-    </Reference>
-    <Reference Include="WPFExtensions">
-      <HintPath>..\..\..\..\..\Downloads\graphsharp\sourceCode\graphsharp\bin\WPFExtensions.dll</HintPath>
-    </Reference>
   </ItemGroup>
 </Project>
